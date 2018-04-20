@@ -1,0 +1,6 @@
+#!/bin/sh
+bearer=`cat bearer` || exit 1 
+curl --request GET \
+  --url https://integrate.elluciancloud.com/consume \
+  --header 'Authorization: Bearer '"${bearer}" \
+  --output consume.json

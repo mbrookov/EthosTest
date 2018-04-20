@@ -1,0 +1,8 @@
+#!/bin/sh -vx
+
+bearer=`cat bearer` || exit 1
+curl --request GET \
+  --url 'http://integrate.elluciancloud.com/api/persons?criteria={%22role%22:%22employee%22}' \
+  --header 'Accept: application/vnd.hedtech.integration.v8+json' \
+  --header 'Authorization: Bearer '"${bearer}" \
+  --header 'Content-Type: application/vnd.hedtech.integration.v8+json'

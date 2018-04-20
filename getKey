@@ -1,0 +1,11 @@
+#!/bin/sh
+#get an Ethos bearer token
+
+. APIKey || exit 1
+#echo curl --request POST \
+  #--url https://integrate.elluciancloud.com/auth \
+  #--header 'Authorization: Bearer {{'"${apiKey}"'}}'
+
+curl --request POST \
+  --url https://integrate.elluciancloud.com/auth \
+  --header 'Authorization: Bearer '"${apiKey}"'' > bearer

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+bearer=`cat bearer` || exit 1
+person=LABUSR01
+person=A00038153
+person=H00030000
+curl --request GET \
+  --url 'https://integrate.elluciancloud.com/api/persons?criteria=%7b%22credential%22:%7b%22type%22:%22bannerId%22,%22value%22:%22'"${person}"'%22%7d' \
+  --header 'Accept: application/vnd.hedtech.integration.v8+json' \
+  --header 'Authorization: Bearer '"${bearer}" \
+  --output specificPersonRon.json
+exit $?
+
+  --url 'https://integrate.elluciancloud.com/api/persons?criteria={%22credential%22:{%22type%22:%22bannerId%22,%22value%22:%22LABUSR01%22}' \
