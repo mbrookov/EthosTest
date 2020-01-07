@@ -13,6 +13,11 @@ getRole -- get persons with a student role<br>
 getSpecificPerson -- look up a user by SPRIDEN id, Ethos calls it the Banner ID<br>
 <br>
 Quick demo:<br>
+<br>
+Create a file named APIKey, it needs one line that sets a shell variable named apiKey, it should look something like:
+<br>
+apiKey=9839acb-2820bf88-abcdef123456-098765fedcba<br>
+<br>
 mbrookov@myrddin EthosTest % ./getKey <br>
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current<br>
                                  Dload  Upload   Total   Spent    Left  Speed<br>
@@ -22,6 +27,7 @@ mbrookov@myrddin EthosTest % ./consume<br>
                                  Dload  Upload   Total   Spent    Left  Speed<br>
 100 22204  100 22204    0     0  47042      0 --:--:-- --:--:-- --:--:-- 46942<br>
 mbrookov@myrddin EthosTest % <br>
+<br>
+Look in the file named consume.json.<br>
 
-Look in the file named consume.json.
 
